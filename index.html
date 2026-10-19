@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="description" content="Uma cartinha especial, feita com carinho e um pedido muito importante no final.">
+  <title>Uma cartinha pra você 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#513c42;--muted:#977b80;--pink:#ec7890;--deep:#d75575;--cream:#fff8f5;--peach:#ffe8df;--lilac:#eee9ff;--yellow:#fff2c6}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:var(--cream);overflow-x:hidden}button{font:inherit;cursor:pointer}.page{min-height:100vh;position:relative;isolation:isolate}.blob{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);opacity:.8}.blob.a{width:280px;height:280px;background:var(--peach);top:-70px;right:-90px}.blob.b{width:230px;height:230px;background:var(--lilac);left:-100px;top:43%}.blob.c{width:170px;height:170px;background:var(--yellow);right:-75px;bottom:6%}.wrap{width:min(100% - 36px,940px);margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;padding:25px 0;color:var(--muted);font-size:.84rem}.brand{font-weight:700;letter-spacing:.02em}.brand span{color:var(--pink)}.progress{display:flex;gap:6px}.dot{width:7px;height:7px;border-radius:20px;background:#edd9d8;transition:.3s}.dot.on{width:21px;background:var(--pink)}
+    main{padding:24px 0 64px}.screen{display:none;animation:enter .5s ease both}.screen.active{display:block}@keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}.intro{min-height:72vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #f4e6e2;padding:8px 13px;border-radius:30px;color:var(--deep);font-size:.8rem;font-weight:700}.eyebrow i{font-style:normal}.hero h1,.title{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.04em}.hero h1{font-size:clamp(3rem,7vw,5.5rem);line-height:1.03;margin:20px 0 16px}.hero h1 em{color:var(--deep);font-style:normal}.hero p{font-size:1.08rem;line-height:1.75;color:var(--muted);max-width:420px;margin:0 0 26px}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.btn{border:0;border-radius:15px;padding:14px 21px;font-weight:700;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--deep);color:white;box-shadow:0 9px 20px #d7557533}.soft{background:white;color:var(--deep);border:1px solid #f0deda}.hint{font-size:.78rem;color:#ae9699;margin-top:15px}.art{min-height:340px;display:grid;place-items:center;position:relative}.envelope{width:min(290px,80vw);height:210px;position:relative;filter:drop-shadow(0 22px 22px #bc758126);animation:float 4s ease-in-out infinite}.env-back{position:absolute;inset:0;background:#f3a0ac;border-radius:14px}.letter{position:absolute;width:78%;height:86%;left:11%;top:-17px;background:#fffdfa;border-radius:8px;display:grid;place-items:center;text-align:center;padding:18px;transform:rotate(-4deg);box-shadow:0 7px 18px #76505a1a}.letter b{font-family:'Playfair Display',serif;color:var(--deep);font-size:1.2rem}.letter span{font-size:2rem;display:block;margin-bottom:7px}.flap{position:absolute;inset:0;background:#e98698;clip-path:polygon(0 0,100% 0,50% 58%);border-radius:14px 14px 0 0;z-index:2}.env-front{position:absolute;inset:0;background:#f5b1b7;clip-path:polygon(0 100%,0 0,50% 60%,100% 0,100% 100%);border-radius:0 0 14px 14px;z-index:3}.seal{position:absolute;z-index:4;left:50%;top:55%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff5f3;color:var(--deep);font-size:1.3rem;box-shadow:0 3px 8px #92485622}.spark{position:absolute;font-size:1.4rem;animation:twinkle 2.5s ease-in-out infinite}.s1{top:14%;left:15%}.s2{top:23%;right:12%;animation-delay:.5s}.s3{bottom:18%;left:16%;animation-delay:1s}.s4{bottom:12%;right:19%;animation-delay:.7s}@keyframes float{50%{transform:translateY(-11px) rotate(1deg)}}@keyframes twinkle{50%{transform:scale(1.2) rotate(12deg)}}
+    .content{max-width:740px;margin:34px auto 0;text-align:center}.step{color:var(--deep);font-size:.8rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.title{font-size:clamp(2.2rem,5vw,3.5rem);line-height:1.08;margin:14px 0}.lead{color:var(--muted);font-size:1.04rem;line-height:1.75;max-width:600px;margin:0 auto 26px}.card{background:#fff;border:1px solid #f1e4e1;border-radius:25px;padding:clamp(22px,5vw,38px);box-shadow:0 18px 45px #95615f0c}.quiz-card{max-width:600px;margin:auto}.question{font-family:'Playfair Display',serif;font-size:1.45rem;margin:0 0 20px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{min-height:64px;background:#fffaf8;border:1px solid #f1e2dd;color:var(--ink);border-radius:16px;padding:14px;font-weight:600;text-align:left;transition:.2s}.choice:hover,.choice.selected{border-color:#e9899c;background:#fff0f1;transform:translateY(-2px)}.result{height:28px;margin:17px 0 0;color:var(--deep);font-weight:700}.wide{width:100%;max-width:190px;margin-top:20px}.note{background:#fffdfb;border:1px dashed #e8b9b8;border-radius:20px;padding:25px;text-align:left;line-height:1.85;color:#70585e;position:relative}.note:before{content:'✿';position:absolute;right:17px;top:12px;color:#e997a1;font-size:1.3rem}.note p{margin:0 0 12px}.note p:last-child{margin-bottom:0}.memory{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}.memory div{padding:18px;border-radius:18px;background:#fff6ef;text-align:left}.memory div:nth-child(2){background:#f4f0ff}.memory b{display:block;font-size:.88rem;margin-bottom:6px}.memory span{font-size:.85rem;color:var(--muted);line-height:1.55}.final-card{max-width:660px;margin:auto;text-align:center;position:relative;overflow:hidden}.final-card:before{content:'♡';font-size:9rem;position:absolute;right:-10px;top:-50px;color:#fff2f3;z-index:0}.final-inner{position:relative;z-index:1}.final-heart{font-size:3rem;animation:beat 1.4s infinite}@keyframes beat{50%{transform:scale(1.13)}}.final-text{font-family:'Playfair Display',serif;font-size:1.25rem;line-height:1.8;color:#745b61;margin:15px auto 26px;max-width:510px}.ask{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.5rem);color:var(--deep);line-height:1.2;margin:14px auto 24px;max-width:500px}.answer-row{display:flex;justify-content:center;align-items:center;gap:14px;min-height:62px}.yes{font-size:1.05rem;padding:16px 25px}.no{background:#fff;color:#987b81;border:1px solid #efe2e2;position:relative}.yay{display:none;background:#fff0f1;color:var(--deep);padding:15px;border-radius:15px;margin:19px auto 0;font-weight:700;max-width:440px}.yay.show{display:block;animation:enter .4s ease}.restart{display:block;margin:17px auto 0;background:transparent;border:0;color:#ad9297;text-decoration:underline;font-size:.85rem}.footer{text-align:center;padding:15px;color:#b19b9e;font-size:.78rem}
+    .puzzle-card{max-width:530px;margin:auto}.word-list{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}.word-chip{padding:7px 11px;border-radius:20px;background:#fff3f0;color:#9b737b;font-size:.8rem;font-weight:700;transition:.2s}.word-chip.found{background:#eaf7ef;color:#4e9069;text-decoration:line-through}.word-grid{width:min(100%,390px);margin:auto;display:grid;grid-template-columns:repeat(10,1fr);gap:4px;touch-action:none;user-select:none;-webkit-user-select:none}.letter-cell{aspect-ratio:1;border:1px solid #f0e4e1;border-radius:9px;background:#fffaf9;color:#634b51;font-weight:700;font-size:clamp(.78rem,3.6vw,1rem);padding:0;transition:.16s}.letter-cell:hover,.letter-cell.selected{background:#ffe4e8;border-color:#e9899c}.letter-cell.found{background:#eaf7ef;border-color:#cce9d5;color:#4e9069}.puzzle-status{min-height:44px;margin:18px auto 4px;color:var(--deep);font-size:.9rem;font-weight:600;line-height:1.5}.puzzle-card #puzzleNext:disabled{opacity:.45;cursor:not-allowed}
+    .confetti{position:fixed;z-index:9;pointer-events:none;top:-20px;animation:fall 3.5s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.2}}@media(max-width:700px){.intro{grid-template-columns:1fr;text-align:center;padding-top:25px;gap:0}.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}.art{min-height:270px}.envelope{transform:scale(.88)}main{padding-top:5px}.content{margin-top:27px}.topbar{padding:18px 0}.choices{grid-template-columns:1fr}.memory{grid-template-columns:1fr}.answer-row{gap:10px}.final-text{font-size:1.1rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="page"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+    <div class="wrap">
+      <header class="topbar"><div class="brand">feito com <span>♡</span> carinho</div><div class="progress" aria-label="Progresso"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div></header>
+      <main>
+        <section class="screen active" data-step="0"><div class="content"><div class="step">um desafio cheio de amor</div><h2 class="title">Caça-palavras da princesa 🌷</h2><p class="lead">Arraste sobre as letras para marcar uma palavra. Também dá para tocar na primeira letra e depois na última. 💗</p><div class="card puzzle-card"><div class="word-list" id="wordList" aria-live="polite"></div><div class="word-grid" id="wordGrid" role="group" aria-label="Caça-palavras"></div><div class="puzzle-status" id="puzzleStatus" aria-live="polite">Encontre todas as palavras para abrir sua cartinha ✨</div><button class="btn primary" id="puzzleNext" onclick="go(1)" disabled>Continuar →</button></div></div></section>
+        <section class="screen" data-step="1"><div class="intro"><div class="hero"><span class="eyebrow"><i>💌</i> uma coisinha pra você</span><h1>Ei, <em>você!</em></h1><p>Preparei uma surpresinha pequena, mas cheia de carinho. Prometo que leva só um minutinho… e tem um final especial. ✨</p><div class="actions"><button class="btn primary" onclick="go(2)">Abrir minha cartinha <span>♡</span></button></div><div class="hint">psiu… pode sorrir à vontade 😊</div></div><div class="art" aria-hidden="true"><span class="spark s1">✦</span><span class="spark s2">♡</span><span class="spark s3">✧</span><span class="spark s4">🌷</span><div class="envelope"><div class="env-back"></div><div class="letter"><div><span>🌷</span><b>uma mensagem<br>especial pra você</b></div></div><div class="flap"></div><div class="env-front"></div><div class="seal">♡</div></div></div></div></section>
+        <section class="screen" data-step="2"><div class="content"><div class="step">01 · pergunta importante</div><h2 class="title">Vamos testar sua fofura? 🐻</h2><p class="lead">Escolhe sua resposta… mas eu já tenho minha favorita. 😏</p><div class="card quiz-card"><p class="question">Qual dessas coisas deixa meu dia melhor?</p><div class="choices"><button class="choice" onclick="pick(this,'Um sorriso seu 😊')">A · Um sorriso seu 😊</button><button class="choice" onclick="pick(this,'Fotos sapecas 📸')">B · Fotos sapecas 📸</button><button class="choice" onclick="pick(this,'Um áudio da minha princesa 🎙️')">C · Um áudio da minha princesa 🎙️</button><button class="choice" onclick="pick(this,'Todas! 💗')">D · Todas! 💗</button></div><div class="result" id="quizResult" aria-live="polite"></div><button class="btn primary wide" onclick="go(3)">Continuar →</button></div></div></section>
+        <section class="screen" data-step="3"><div class="content"><div class="step">02 · uma confissão</div><h2 class="title">Tem uma coisa que eu queria te contar…</h2><p class="lead">E eu pensei em escrever aqui porque algumas coisas merecem ser ditas com calma. 💗</p><div class="card"><div class="note"><p>Desde que você apareceu, meus dias ganharam um tantinho a mais de cor e conforto.</p><p>Eu gosto do seu jeito, das nossas conversas, das risadas que surgem do nada e até das conversas simples, que ficam especiais só porque você está nelas.</p><p>Você tem esse jeitinho único de fazer meu coração ficar todo bobo. E, sinceramente? Eu adoro isso.</p><p>Te amo muito, minha princesa linda, meu beijinho, meu amor, minha garotinha. 🥰</p></div><div class="memory"><div><b>Meu momento favorito</b><span>É quando estamos conversando e o tempo parece passar rápido demais.</span></div><div><b>Uma coisa que adoro em você</b><span>Seu sorriso — devia ser considerado patrimônio público, mas não podia: é só meu e de mais ninguém. ✨</span></div></div><button class="btn primary" onclick="go(4)">Tem mais? <span>👀</span></button></div></div></section>
+        <section class="screen" data-step="4"><div class="content"><div class="step">03 · o momento especial</div><h2 class="title">Chegou a hora… 💞</h2><p class="lead">Respira fundo. Eu tô um pouquinho nervoso, mesmo sendo só uma página. 😳</p><div class="card final-card"><div class="final-inner"><div class="final-heart">💗</div><p class="final-text">Você é uma pessoa muito especial pra mim. Quero continuar criando lembranças lindas ao seu lado, dividindo risadas, carinho e todos os pequenos momentos que fazem a vida ficar mais bonita.</p><h3 class="ask">Você aceita namorar comigo? 🥺</h3><div class="answer-row"><button class="btn primary yes" onclick="answerYes()">Sim! 💖</button><button class="btn no" id="noBtn" onclick="nope()">Hmm… 🤔</button></div><div class="yay" id="yay" aria-live="polite">Aaaaah! 💕 Você acabou de deixar meu coração feliz demais! Mal posso esperar por tudo que vem pela frente. 🥰</div><button class="restart" onclick="go(0)">Ler de novo ↺</button></div></div></div></section>
+      </main>
+      <footer class="footer">feito com muito carinho e um pouquinho de coragem ♡</footer>
+    </div>
+  </div>
+  <script>
+  function go(n) {
+    document.querySelectorAll('.screen').forEach((s, i) => {
+      s.classList.toggle('active', i === n);
+    });
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('on', i === n);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function pick(btn, msg) {
+    document.querySelectorAll('.choice').forEach(x => x.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('quizResult').textContent =
+      msg === 'Todas! 💗'
+        ? 'Acertou! Todas essas coisas deixam meu dia melhor. 🥰'
+        : 'Boa escolha… mas a resposta é: todas! 💗';
+  }
+
+  const words = ['SORRISO', 'CARINHO', 'PRINCESA', 'BEIJINHO', 'AMOR', 'RISADA'];
+  const GRID_SIZE = 10;
+  const directions = [
+    [-1, -1], [-1, 0], [-1, 1],
+    [0, -1],            [0, 1],
+    [1, -1],  [1, 0],   [1, 1]
+  ];
+  let puzzle = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(''));
+  let selection = [];
+  let foundWords = new Set();
+  let foundCells = new Set();
+
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  function placeWords() {
+    const placementOrder = [...words].sort((a, b) => b.length - a.length);
+    for (const word of placementOrder) {
+      let placed = false;
+      for (let attempt = 0; attempt < 1500 && !placed; attempt++) {
+        const [dr, dc] = directions[Math.floor(Math.random() * directions.length)];
+        const row = Math.floor(Math.random() * GRID_SIZE);
+        const col = Math.floor(Math.random() * GRID_SIZE);
+        const endRow = row + dr * (word.length - 1);
+        const endCol = col + dc * (word.length - 1);
+        if (endRow < 0 || endRow >= GRID_SIZE || endCol < 0 || endCol >= GRID_SIZE) continue;
+
+        const fits = [...word].every((letter, i) => {
+          const existing = puzzle[row + dr * i][col + dc * i];
+          return !existing || existing === letter;
+        });
+        if (!fits) continue;
+
+        [...word].forEach((letter, i) => {
+          puzzle[row + dr * i][col + dc * i] = letter;
+        });
+        placed = true;
+      }
+    }
+  }
+
+  placeWords();
+  puzzle = puzzle.map(row =>
+    row.map(letter => letter || alphabet[Math.floor(Math.random() * alphabet.length)])
+  );
+
+  function renderPuzzle() {
+    const grid = document.getElementById('wordGrid');
+    const list = document.getElementById('wordList');
+    grid.innerHTML = '';
+    list.innerHTML = '';
+
+    words.forEach(word => {
+      const chip = document.createElement('span');
+      chip.className = 'word-chip' + (foundWords.has(word) ? ' found' : '');
+      chip.textContent = foundWords.has(word) ? word : '✦ ✦ ✦ ✦';
+      list.appendChild(chip);
+    });
+
+    puzzle.forEach((row, r) => row.forEach((letter, c) => {
+      const cell = document.createElement('button');
+      cell.className = 'letter-cell';
+      cell.type = 'button';
+      cell.textContent = letter;
+      cell.setAttribute('aria-label', `linha ${r + 1}, coluna ${c + 1}, ${letter}`);
+
+      if (selection.some(([sr, sc]) => sr === r && sc === c)) {
+        cell.classList.add('selected');
+      }
+      if (foundCells.has(`${r},${c}`)) {
+        cell.classList.add('found');
+      }
+
+      cell.dataset.row = r;
+      cell.dataset.col = c;
+      cell.addEventListener('click', event => {
+        if (event.detail === 0) selectLetter(r, c);
+      });
+      grid.appendChild(cell);
+    }));
+  }
+
+  function buildPath(start, end) {
+    const [r0, c0] = start;
+    const [r1, c1] = end;
+    const dr0 = r1 - r0;
+    const dc0 = c1 - c0;
+    if (!(dr0 === 0 || dc0 === 0 || Math.abs(dr0) === Math.abs(dc0))) return null;
+
+    const dr = Math.sign(dr0);
+    const dc = Math.sign(dc0);
+    const steps = Math.max(Math.abs(dr0), Math.abs(dc0));
+    return Array.from({ length: steps + 1 }, (_, i) => [r0 + dr * i, c0 + dc * i]);
+  }
+
+  function checkPath(path) {
+    if (!path?.length) return false;
+    const text = path.map(([r, c]) => puzzle[r][c]).join('');
+    const reverse = [...text].reverse().join('');
+    const word = words.find(w => w === text || w === reverse);
+
+    if (word) {
+      foundWords.add(word);
+      path.forEach(([r, c]) => foundCells.add(`${r},${c}`));
+      selection = [];
+      document.getElementById('puzzleStatus').textContent =
+        foundWords.size === words.length
+          ? 'Encontrou todas! Você me conhece direitinho. 💗'
+          : `Boa! ${word.toLowerCase()} combina muito com você. 🌷`;
+      if (foundWords.size === words.length) {
+        document.getElementById('puzzleNext').disabled = false;
+      }
+      renderPuzzle();
+      return true;
+    }
+
+    const isPrefix = words.some(w =>
+      w.startsWith(text) || [...w].reverse().join('').startsWith(text)
+    );
+    if (isPrefix) {
+      selection = path;
+      document.getElementById('puzzleStatus').textContent =
+        'Continue até o final da palavra ou arraste pelas letras. ✨';
+    } else {
+      selection = [];
+      document.getElementById('puzzleStatus').textContent =
+        'Essa sequência não formou uma palavra. Tente outra! 💗';
+    }
+    renderPuzzle();
+    return false;
+  }
+
+  let dragStart = null;
+  let dragPath = [];
+  let dragging = false;
+  const wordGrid = document.getElementById('wordGrid');
+
+  wordGrid.addEventListener('pointerdown', event => {
+    const cell = event.target.closest('.letter-cell');
+    if (!cell || cell.classList.contains('found') || foundWords.size === words.length) return;
+    event.preventDefault();
+
+    const point = [Number(cell.dataset.row), Number(cell.dataset.col)];
+    const oldStart = selection.length ? selection[0] : null;
+    const oldPath = oldStart ? buildPath(oldStart, point) : null;
+    dragStart = oldPath ? oldStart : point;
+    dragPath = buildPath(dragStart, point) || [point];
+    dragging = true;
+    wordGrid.setPointerCapture(event.pointerId);
+    selection = dragPath;
+    renderPuzzle();
+  });
+
+  wordGrid.addEventListener('pointermove', event => {
+    if (!dragging) return;
+    const cell = document.elementFromPoint(event.clientX, event.clientY)?.closest('.letter-cell');
+    if (!cell) return;
+    const point = [Number(cell.dataset.row), Number(cell.dataset.col)];
+    const path = buildPath(dragStart, point);
+    if (path) {
+      dragPath = path;
+      selection = path;
+      renderPuzzle();
+    }
+  });
+
+  function finishPointerSelection() {
+    if (!dragging) return;
+    dragging = false;
+    checkPath(dragPath);
+    dragStart = null;
+    dragPath = [];
+  }
+
+  wordGrid.addEventListener('pointerup', finishPointerSelection);
+  wordGrid.addEventListener('pointercancel', finishPointerSelection);
+
+  function selectLetter(r, c) {
+    if (foundWords.size === words.length) return;
+    if (!selection.length) {
+      checkPath([[r, c]]);
+      return;
+    }
+    if (selection[0][0] === r && selection[0][1] === c) {
+      selection = [];
+      renderPuzzle();
+      return;
+    }
+    const path = buildPath(selection[0], [r, c]);
+    if (path) checkPath(path);
+    else checkPath([[r, c]]);
+  }
+
+  function answerYes() {
+    document.getElementById('yay').classList.add('show');
+    document.getElementById('noBtn').style.display = 'none';
+    confetti();
+  }
+
+  function nope() {
+    const button = document.getElementById('noBtn');
+    const phrases = [
+      'Tem certeza? 🥺',
+      'Pensa com carinho… 💗',
+      'E se eu pedir com jeitinho? 🌷',
+      'Esse botão tá tímido 😳'
+    ];
+    button.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+    button.style.transform =
+      `translate(${Math.random() * 22 - 11}px, ${Math.random() * 14 - 7}px)`;
+  }
+
+  function confetti() {
+    const colors = ['#ec7890', '#f4bc74', '#bca9f4', '#91cdb4', '#f49db0'];
+
+    for (let i = 0; i < 75; i++) {
+      const piece = document.createElement('i');
+      piece.className = 'confetti';
+      piece.textContent = ['♥', '✦', '•', '♡'][Math.floor(Math.random() * 4)];
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.color = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.fontSize = 12 + Math.random() * 17 + 'px';
+      piece.style.animationDelay = Math.random() * 1.2 + 's';
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 5000);
+    }
+  }
+
+  renderPuzzle();
+</script>
+</body>
+</html>
